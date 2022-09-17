@@ -9,7 +9,3 @@ test("capitalize('Bruh') to return 'Bruh'", () => {
 test("capitalize('') to return blank/empty space", () => {
     expect(capitalize('')).toMatch(/\s/);
 });
-
-test("capitalize() to return 'You didn't provide a word.'", () => {
-    expect(capitalize()).toMatch(/You didn't provide a word./);
-});
