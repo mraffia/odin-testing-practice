@@ -58,4 +58,26 @@ function caesarCipher(word) {
     return shifted;
 }
 
-export { capitalize, reverseString, calculator, caesarCipher };
+function analyzeArray(arr) {if (arr.length === 0) {
+        return { average: null, min: null, max: null, length: 0 };
+    } else if (arr.length === 1) {
+        return { average: arr[0], min: arr[0], max: arr[0], length: 1 };
+    }
+
+    let averageValue = arr.reduce((a, b) => a + b, 0) / arr.length;
+    let minValue = arr[0];
+    let maxValue = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < minValue) {
+            minValue = arr[i];
+        }
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
+        }
+    }
+
+    return { average: averageValue, min: minValue, max: maxValue, length: arr.length };
+}
+
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };

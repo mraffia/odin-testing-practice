@@ -2,7 +2,8 @@ import {
     capitalize, 
     reverseString, 
     calculator,
-    caesarCipher
+    caesarCipher,
+    analyzeArray
 } from "./jestPractice.js"
 
 // capitalize
