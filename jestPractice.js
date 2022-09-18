@@ -33,7 +33,6 @@ function caesarCipher(word) {
     let shifted = "";
 
     for (let i = 0; i < word.length; i++) {
-        console.log(word.charAt(i));
         for (let j = 0; j < alphabet.length; j++) {
             if (word.charAt(i).toLowerCase() === alphabet.charAt(j)) {
                 if (j === alphabet.length - 1) {
