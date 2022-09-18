@@ -13,4 +13,19 @@ function reverseString(word) {
     return reversed
 }
 
-export { capitalize, reverseString };
+const calculator = {
+    add: function(num1, num2) {
+        return num1 + num2;
+    },
+    subtract: function(num1, num2) {
+        return num1 - num2;
+    },
+    divide: function(num1, num2) {
+        return num1 / num2;
+    },
+    multipl: function(num1, num2) {
+        return num1 * num2;
+    }
+}
+
+export { capitalize, reverseString, calculator };
