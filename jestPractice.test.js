@@ -46,3 +46,16 @@ test("calculator.divide(20, 4) to return 5", () => {
 test("calculator.multiply(20, 4) to return 80", () => {
     expect(calculator.multiply(20 ,4)).toBe(80);
 });
+
+// caesarCipher
+test("caesarCipher('bruh') to return 'csvi'", () => {
+    expect(caesarCipher('bruh')).toMatch(/csvi/);
+});
+
+test("caesarCipher('Bruh') to return 'Csvi'", () => {
+    expect(caesarCipher('Bruh')).toMatch(/Csvi/);
+});
+
+test("caesarCipher('bruh. moment.') to return blank", () => {
+    expect(caesarCipher('bruh. moment.')).toMatch(/csvi. npnfou./);
+});
