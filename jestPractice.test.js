@@ -1,7 +1,8 @@
 import { 
     capitalize, 
     reverseString, 
-    calculator 
+    calculator,
+    caesarCipher
 } from "./jestPractice.js"
 
 // capitalize
@@ -56,6 +57,6 @@ test("caesarCipher('Bruh') to return 'Csvi'", () => {
     expect(caesarCipher('Bruh')).toMatch(/Csvi/);
 });
 
-test("caesarCipher('bruh. moment.') to return blank", () => {
+test("caesarCipher('bruh. moment.') to return 'csvi. npnfou.'", () => {
     expect(caesarCipher('bruh. moment.')).toMatch(/csvi. npnfou./);
 });

@@ -28,4 +28,35 @@ const calculator = {
     }
 }
 
-export { capitalize, reverseString, calculator };
+function caesarCipher(word) {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let shifted = "";
+
+    for (let i = 0; i < word.length; i++) {
+        console.log(word.charAt(i));
+        for (let j = 0; j < alphabet.length; j++) {
+            if (word.charAt(i).toLowerCase() === alphabet.charAt(j)) {
+                if (j === alphabet.length - 1) {
+                    if (word.charAt(i) === word.charAt(i).toUpperCase()) {
+                        shifted += alphabet.charAt(0).toUpperCase();
+                    } else {
+                        shifted += alphabet.charAt(0);
+                    }
+                } else {
+                    if (word.charAt(i) === word.charAt(i).toUpperCase()) {
+                        shifted += alphabet.charAt(j + 1).toUpperCase();
+                    } else {
+                        shifted += alphabet.charAt(j + 1);
+                    }
+                }
+            } 
+        }
+        if(!(alphabet.includes(word.charAt(i).toLowerCase()))) {
+            shifted += word.charAt(i);
+        }
+    }
+
+    return shifted;
+}
+
+export { capitalize, reverseString, calculator, caesarCipher };
