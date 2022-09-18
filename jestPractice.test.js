@@ -60,3 +60,16 @@ test("caesarCipher('Bruh') to return 'Csvi'", () => {
 test("caesarCipher('bruh. moment.') to return 'csvi. npnfou.'", () => {
     expect(caesarCipher('bruh. moment.')).toMatch(/csvi. npnfou./);
 });
+
+// analyzeArray
+test("analyzeArray([1,8,3,4,2,6]) to return { average: 4, min: 1, max: 8, length: 6 }", () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({ average: 4, min: 1, max: 8, length: 6 });
+});
+
+test("analyzeArray([7]) to return { average: 7, min: 7, max: 7, length: 1 }", () => {
+    expect(analyzeArray([7])).toEqual({ average: 7, min: 7, max: 7, length: 1 });
+});
+
+test("analyzeArray([]) to return { average: null, min: null, max: null, length: 0 }", () => {
+    expect(analyzeArray([])).toEqual({ average: null, min: null, max: null, length: 0 });
+});
