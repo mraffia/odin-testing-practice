@@ -23,7 +23,7 @@ const calculator = {
     divide: function(num1, num2) {
         return num1 / num2;
     },
-    multipl: function(num1, num2) {
+    multiply: function(num1, num2) {
         return num1 * num2;
     }
 }
